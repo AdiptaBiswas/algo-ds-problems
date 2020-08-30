@@ -23,3 +23,27 @@ print(arr_rot(a,shifts))
 
 # [8, 10, 12, 14, 16, 18, 20, 2, 4, 6]
 
+------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------
+
+# <b>Array Rotate: </b> <i>Cyclic Shifting Elements </i>
+#
+# <b>Problem Source:</b>  https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0
+
+# arr is the array
+
+def cycle_Arr(arr):
+    count = 0
+    while count < len(arr)-1:
+        temp = arr.pop(0)
+        arr.append(temp)
+        count += 1
+    return arr
+
+# Inputs
+
+a = [9, 8, 7, 6, 4, 2, 1, 3]
+print(cycle_Arr(a))
+
+# [3, 9, 8, 7, 6, 4, 2, 1]
+
